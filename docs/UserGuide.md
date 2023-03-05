@@ -2,7 +2,6 @@
 
 Title: HospiSearch User Guide
 ---
-
 HospiSearch is a **desktop app for managing contacts, optimized for use via a Command Line Interface** 
 (CLI) while still having the benefits of a **Graphical User Interface (GUI)**. If you can type fast, HospiSearch can get your contact management tasks done faster than traditional GUI apps.
 
@@ -45,17 +44,11 @@ e.g. [t/TAG]…​ can be used as   (i.e. 0 times), t/friend, t/friend t/family 
 - Extraneous parameters for commands that do not take in parameters (such as `help`, `list`, `exit` and `clear`) will be ignored.
   e.g. if the command specifies `help 123`, it will be interpreted as `help`.
 
-
-
-
-  
 ### Viewing help : `help`
 
 Shows a message explaning how to access the help page.
 
-
 Format: `help`
-
 
 ### Adding a person: `add`
 
@@ -63,22 +56,17 @@ Adds a person to the patient records.
 
 Format: `add n/NAME i/NRIC p/PHONE_NUMBER e/EMAIL a/ADDRESS [t/TAG]…`
 
-
 **Tip**: A person can have any number of tags (including 0)
-
 
 Examples:
 * `add n/John Doe i/T0012345A p/98765432 e/johnd@example.com a/John street, block 123, #01-01`
 * `add n/Betsy Crowe i/T0012345B e/betsycrowe@example.com a/Newgate Prison p/1234567 t/diabetic`
-
-
 
 ### Adding a person: `add`
 
 Edits an existing person in the patient record.
 
 Format: `edit INDEX [n/NAME] [i/NRIC] [p/PHONE] [e/EMAIL] [a/ADDRESS] [t/TAG]…​`
-
 
 * Edits the person at the specified `INDEX`. 
 * The index refers to the index number shown in the displayed person list. The index must be a positive integer 1, 2, 3, …​
@@ -91,13 +79,11 @@ Examples:
 * `edit 1 p/91234567 e/johndoe@example.com`.Edits the phone number and email address of the 1st person to be 91234567 and johndoe@example.com respectively.
 * `edit 2 n/Betsy Crower t/`.Edits the name of the 2nd person to be Betsy Crower and clears all existing tags.
 
-
 ### Deleting a person: `delete`
 
 Deletes the specified person from the address book.
 
 Format: `delete INDEX`
-
 
 * Edits the person at the specified `INDEX`.
 * The index refers to the index number shown in the displayed person list.
@@ -112,7 +98,6 @@ Examples:
 Filters people according to a particular attribute. Eg. Medicine usage or health conditions.
 
 Format: `filter KEYWORD [MORE_KEYWORDS]`
-
 
 * The search is case-sensitive. e.g panadol will match panadol 
 * The order of the keywords does matters. e.g. panadol will match panadol 
@@ -130,7 +115,6 @@ Format: `get i/NRIC`
 
 Examples:
 * `get i/T0012345A`
-  
 
 ###Clearing all data: `clearAll`
 Purges all data from the database
@@ -148,13 +132,11 @@ Example: `save 3` saves the data to the 3rd slot
 Help function lists out all the commands available, along with a brief description
 Format: `help`
 
-
 ### Listing all persons : `list`
 
 Shows a list of all persons in the address book.
 
 Format: `list`
-
 
 --------------------------------------------------------------------------------------------------------------------
 
@@ -167,14 +149,14 @@ Format: `list`
 
 ## Command summary
 
-Action | Format, Examples
---------|------------------
-**Add** | `add n/NAME i/NRIC p/PHONE_NUMBER e/EMAIL a/ADDRESS [t/TAG]…​` <br> e.g. `add n/John Doe i/T0012345A p/98765432 e/johnd@example.com a/John street, block 123, #01-01`
-**Get** | ` get i/T0012345A`
-**Clear all** | `clearAll`
-**Delete** | `delete INDEX` e.g., `delete 3`
-**Edit** | `edit INDEX [n/NAME] [i/NRIC] [p/PHONE] [e/EMAIL] [a/ADDRESS] [t/TAG]…`  e.g.,edit 2 n/James Lee e/jameslee@example.com
-**Find** | `filter KEYWORD [MORE_KEYWORDS]` <br/> e.g., find panadol <br/> e.g., find diabetes
-**Save** | `save FILE_NO` <br/> eg. save 3
-**List** | `list`
-**Help** | `help`
+| Action        | Format, Examples                                                                                                                                                      |
+|---------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| **Add**       | `add n/NAME i/NRIC p/PHONE_NUMBER e/EMAIL a/ADDRESS [t/TAG]…​` <br> e.g. `add n/John Doe i/T0012345A p/98765432 e/johnd@example.com a/John street, block 123, #01-01` |
+| **Get**       | ` get i/T0012345A`                                                                                                                                                    |
+| **Clear all** | `clearAll`                                                                                                                                                            |
+| **Delete**    | `delete INDEX` e.g., `delete 3`                                                                                                                                       |
+| **Edit**      | `edit INDEX [n/NAME] [i/NRIC] [p/PHONE] [e/EMAIL] [a/ADDRESS] [t/TAG]…`  e.g.,edit 2 n/James Lee e/jameslee@example.com                                               |
+| **Find**      | `filter KEYWORD [MORE_KEYWORDS]` <br/> e.g., find panadol <br/> e.g., find diabetes                                                                                   |
+| **Save**      | `save FILE_NO` <br/> eg. save 3                                                                                                                                       |
+| **List**      | `list`                                                                                                                                                                |
+| **Help**      | `help`                                                                                                                                                                |

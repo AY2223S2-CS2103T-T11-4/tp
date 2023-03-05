@@ -378,7 +378,6 @@ Priorities: High (must have) - `* * *`, Medium (nice to have) - `* *`, Low (unli
 * 1a. There is no such patient with specified NRIC in the HS system.
   Use case ends.
 
-  
 *{More to be added}*
 
 ### Non-Functional Requirements
