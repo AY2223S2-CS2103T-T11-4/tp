@@ -62,7 +62,7 @@ Note: HospiSearch is compitable with Windows, MacOS and Ubuntu.
 
 ## GUI Information
 
-ADD PICS N STUFF HERE !!!!!!!!!!!!!!!!!!!!!!!!!!!
+![DefinedGUI](images/DefinedGUI.png)
   
 --------------------------------------------------------------------------------------------------------------------  
 
@@ -74,7 +74,7 @@ ADD PICS N STUFF HERE !!!!!!!!!!!!!!!!!!!!!!!!!!!
 | Name                 | n/     |  
 | Phone                | p/     |  
 | Gender               | g/     |  
-| Doctor               | ad/    | 
+| Doctor               | ad/    |  
 | Email                | e/     |  
 | Address              | a/     | 
 | Tag                  | t/     |
@@ -128,7 +128,7 @@ Adds a person to the patient records.
 <div markdown="span" class="alert alert-info">:information_source:**Note:** Do take note which patient details are 
 optional
 
-Format: `add i/NRIC n/NAME dob/DATE OF BIRTH p/PHONE a/ADDRESS d/DRUG ALLERGIES g/GENDER ad/DOCTOR [e/EMAIL] [t/TAG]…​ [m/MEDICINE]…​`
+Format: `add i/NRIC n/NAME dob/DATE OF BIRTH p/PHONE a/ADDRESS d/DRUGALLERGIES g/GENDER ad/DOCTOR [e/EMAIL] [t/TAG]…​ [m/MEDICINE]…​`
 
 💡**Tip**:
 <br/>A patient can have any number of tags and medicine (including 0)
@@ -147,7 +147,7 @@ Edits an existing patient in the patient records.
 <div markdown="span" class="alert alert-info">:information_source:**Note:** Only include the prefixes for the specific
 patient detail you would like to edit.
 
-Format: `edit INDEX [i/NRIC] [n/NAME] [dob/DATE OF BIRTH] [p/PHONE] [e/EMAIL] [a/ADDRESS] [d/DRUGALLERGY] [g/GENDER] [ad/DOCTOR] [t/TAG]…​ [m/MEDICINE]…​`
+Format: `edit INDEX [i/NRIC] [n/NAME] [dob/DATE OF BIRTH] [p/PHONE] [e/EMAIL] [a/ADDRESS] [d/DRUGALLERGIES] [g/GENDER] [ad/DOCTOR] [t/TAG]…​ [m/MEDICINE]…​`
 
 
 💡**Tip**:
@@ -179,13 +179,14 @@ that you have loaded.
 
 Format: `list`
 
-### Find patients by nric, name, address or tags: `find`
+### Find patients by nric, name, address, doctor or tags: `find`
 
 Find patients according to a particular attribute stated followed by the change.
 
+Eg. name(`n/`), address(`a/`), nric(`i/`), tag(`t/`), doctor(`ad/`)
+
 <div markdown="span" class="alert alert-info">:information_source:**Note:** Find searches by full strings and not 
 substrings. You may only search for a few attributes.
-
 
 Format: `find (n/NAME | i/NRIC | m/MEDICINE | t/TAG) [MORE_KEYWORDS]`
 
@@ -207,7 +208,7 @@ Examples (The following results are based of the sample data provided):
   or  `serangoon`.
 * `find t/Diabetic` returns all persons with the tag `Diabetic`.
 * `find t/Diabetic Osteoporotic` returns all persons with the tag `Diabetic` or `Osteoporotic` or both.
-* `find ad/Alex` returns all persons with attending doctor 'Alex'.
+* `find ad/Shannon` returns all persons with attending doctor `Shannon`
 
 ### Backup patient records: `backup`
 
